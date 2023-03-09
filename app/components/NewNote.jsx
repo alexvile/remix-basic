@@ -1,7 +1,8 @@
-import { Form, useTransition as useNavigation } from '@remix-run/react';
+import { Form, useActionData, useTransition as useNavigation } from '@remix-run/react';
 import styles from './NewNote.css';
 
 function NewNote() {
+  const data = useActionData();
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
   return (
