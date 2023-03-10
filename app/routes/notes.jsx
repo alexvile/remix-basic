@@ -39,6 +39,12 @@ export async function action({request}) {
 export function links() {
     return [...NewNoteLinks(), ...noteListLinks()];
 }
+export function meta() {
+    return {
+        title: 'All notes',
+        description: 'Manage your notes with easy'
+    };
+}
 
 export function CatchBoundary() {
     const caughtResponse = useCatch();
