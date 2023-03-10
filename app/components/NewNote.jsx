@@ -7,7 +7,8 @@ function NewNote() {
   const isSubmitting = navigation.state === 'submitting';
   return (
     <Form method="post"  id="note-form">
-      <p>
+      {data?.message && <p>{data.message}</p>}
+       <p>
         <label htmlFor="title">Title</label>
         <input type="text" id="title" name="title" required />
       </p>
